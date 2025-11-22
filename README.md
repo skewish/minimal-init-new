@@ -1,2 +1,1 @@
-# minimal-init-new
-minimal init new
+minimal-init-new is a simple document to create a minimal init binary for the minimal-linux-src system.  its intended purpose is to better understand the basics of system initiation and coding.  once complete you will be able to use it to start the minimal-linux-src system.  it's very easy and fun, just follow the steps.
