@@ -5,7 +5,7 @@
 
 int main()
 {
-if(getpid() !=1) return 1;
+if(getpid() !=1) return(1);
 
 sigset_t block, mask;
 sigfillset(&block);
