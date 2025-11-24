@@ -20,6 +20,6 @@ posix_spawnattr_init(&attr);
 posix_spawnattr_setsigmask(&attr, &mask);
 posix_spawn(&pid, "/etc/init.d/rcS", &acts, &attr, argv, envp);
 
-while(wait(0)>0);
+while(wait(0) >0);
 }
 
