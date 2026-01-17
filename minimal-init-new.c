@@ -22,4 +22,3 @@ posix_spawn(&pid, "/etc/init.d/rcS", &acts, &attr, argv, envp);
 
 while(wait(0) !=-1);
 }
-
