@@ -14,7 +14,8 @@ sigprocmask(SIG_BLOCK, &mask, 0);
 pid_t pid;
 posix_spawn_file_actions_t acts;
 posix_spawnattr_t attr;
-char *argv[]={"rcS", 0}; char *envp[]={0};
+char *argv[]={"rcS", 0};
+char *envp[]={0};
 
 posix_spawn(&pid, "/etc/init.d/rcS", &acts, &attr, argv, envp);
 while(wait(0) !=-1);
