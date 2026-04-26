@@ -9,7 +9,8 @@ if(getpid() !=1) return(1);
 
 sigset_t sigset;
 sigfillset(&sigset);
-sigprocmask(SIG_BLOCK, &sigset, 0);
+sigdelset(&sigset, SIGINT)
+sigprocmask(SIG_SETMASK, &sigset, 0);
 
 pid_t pid;
 posix_spawn_file_actions_t file_actions;
