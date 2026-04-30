@@ -8,8 +8,7 @@ int main()
 if(getpid() !=1) return(1);
 
 sigset_t sigset;
-sigfillset(&sigset);
-sigdelset(&sigset, SIGINT)
+sigemptyset(&sigset);
 sigprocmask(SIG_SETMASK, &sigset, 0);
 
 pid_t pid;
@@ -20,4 +19,3 @@ char *argv[]={"rcS", 0}; char *envp[]={0};
 posix_spawn(&pid, "/etc/init.d/rcS", &file_actions, &attrp, argv, envp);
 while(wait(0) !=-1);
 }
-
