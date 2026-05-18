@@ -9,13 +9,13 @@ if(getpid() !=1) return(1);
 
 sigset_t sigset;
 sigemptyset(&sigset);
-sigprocmask(SIG_SETMASK, &sigset, 0);
+sigprocmask(SIG_SETMASK, &sigset, NULL);
 
 pid_t pid;
 posix_spawn_file_actions_t file_actions;
 posix_spawnattr_t attrp;
-char *argv[]={"rcS", 0}; char *envp[]={0};
+char *argv[]={"rcS", NULL}; char *envp[]={NULL};
 
 posix_spawn(&pid, "/etc/init.d/rcS", &file_actions, &attrp, argv, envp);
-while(wait(0) !=-1);
+while(wait(NULL) !=-1);
 }
