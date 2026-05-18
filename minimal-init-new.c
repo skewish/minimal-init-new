@@ -17,5 +17,5 @@ posix_spawnattr_t attrp;
 char *argv[]={"rcS", NULL}; char *envp[]={NULL};
 
 posix_spawn(&pid, "/etc/init.d/rcS", &file_actions, &attrp, argv, envp);
-while(wait(NULL) !=-1);
+while(wait(0) !=-1);
 }
