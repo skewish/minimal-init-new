@@ -18,4 +18,5 @@ char *argv[]={"rcS", 0}; char *envp[]={0};
 
 posix_spawn(&pid, "/etc/init.d/rcS", &file_actions, &attrp, argv, envp);
 while(wait(0) !=-1);
+return 0;
 }
